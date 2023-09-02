@@ -1,0 +1,79 @@
+Web Dirilis pada :: 24 july 2023
+_________________________________
+
+
+DKV 2 STUDENT
+___________
+Siswa:15
+Siswi:21
+keluar:0
+Jumlah:36
+
+
+Walikelas
+_________
+kelas X: Agustya Handayani M.Pd
+
+Kelas XI: Ni'matul Hidha Wulansari S.Pd
+
+Kelas XII: Ni'matul Hidha Wulansari S.Pd
+
+
+
+Guru mapel
+__________
+Kelas X
+--------
+BIN: Imam Muhlis S.Pd,M.pd
+DDPK|IPAS: Galih Sasongko S.T
+BK: Eva Ratna K.O, S.Pd
+Info: Nafitri Meyga Pramirta S.Kom
+MAT: Wahyu Mami Sri Rahayu S.Pd
+BIG: Melati Frida K. S.Pd
+PAI: Nuril Wilda Maghfiroh S.Pd
+SEJ: Alifa Ashadiyah Dimastiwi S.Pd
+BADER: Bakhtiarini Perihatin Bahkri S.S
+DDPK: Yahman S.Pd
+DDPK|Seni: Nikolaus Arnoldi S.Pd
+DDPK: Agustya Handayani M.Pd
+PP: Cahyaning Rosita Setiowati S.Pd
+PJOK: Yudi Darmawan P. S.Pd
+
+
+Kelas XI
+--------
+Desain Brief: Eko Slamet Wahyudi S.Kom
+Prinsip Dasar Desain: Holidi S.Kom
+Proses Produksi Desain: Agustya Handayani M.Pd
+Karya Desain: Ni'matul Hidha Wulansari S.Pd
+Perangkat Lunak: Sheila Ramadani S.Pd
+Matematika: Wahyu Mami Sri Rahayu S.Pd
+PABP: Nuril Wilda Maghfiroh S.Pd
+B.Arab: Siti Nur Asiyah S.Pdl
+BADER: Bakhtiarini Perihatin Bahkri S.S
+SEJ: Alifa Ashadiyah Dimastiwi S.Pd
+BIG: Melati Frida K. S.Pd
+BK: Muhammad Rifki Adam S.Pd
+PJOK: Kiki May Rengga Wahyudi S.Pd
+Projek Kreatif Dan Kewirausahaan: Galih Sasongko S.T
+PP: Cahyaning Rosita Setiowati S.Pd
+BIN: Imam Muhlis S.Pd,M.pd
+
+
+
+
+penting
+-----
+Web ini dirancang untuk sebagai profil kelas kami dan sebagai media untuk menyimpan foto-foto kenangan semasa sekolah di SMKN Tutur Sejak tahun 2022-2025
+
+
+
+pengembang
+----------------------------------------------
+Web dikembangkan oleh
+      : Moch Nabil sasbianto 
+      : @Sa.biant
+      : nabilsasbianto89@gmail.com
+ *Front End Developer
+______________________________________________
+ 

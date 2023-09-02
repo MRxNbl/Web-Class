@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Home</title>
+
+  <!-- HTML -->
+
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="/style/Home.css">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+  <meta property="og:image" content="https://dkv-2-beta.mrxnbl.repl.co/thumbnail.jpg" />
+  <meta property="og:title" content="DKV 2 SMKN Tutur" />
+</head>
+
+<body onload="pageload()" ononline="Onnline()" onoffline="Onffline()">
+
+
+
+  <div class="meta">
+    <div class="content" id="content">
+      <div>
+        <div class="banner"></div>
+        <header>
+          <h2>Desain Komunikasi Visual</h2>
+          <div>
+            <div><span class="b">SMKN</span> TUTUR</div>
+            <div class="hdr kelas" id="active2" onclick="dkvalert()">•Desain komunikasi Visual 2
+
+
+              <div class="dropdown-content">
+                <div onclick="DKV1()">Desain komunikasi Visual 1</div>
+                <div onclick="DKV2()">Desain Komunikasi Visual 2</div>
+                <div onclick="DKV3()">Desain Komunikasi Visual 3</div>
+              </div>
+            </div>
+
+
+
+            <div class="hdr">•Angkatan 19</div>
+
+            <div id="mySidenav" class="sidenav">
+              <div href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</div>
+              <h1 style="text-align:center">Menu</h1>
+
+
+
+
+              <a onclick="openig()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
+                  <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                  <path d="M16.5 7.5l0 .01"></path>
+                </svg> Instagram</a>
+
+
+
+
+
+              <a onclick="openfeedback()"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-heart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+                  <path d="M6 21v-2a4 4 0 0 1 4 -4h.5"></path>
+                  <path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z"></path>
+                </svg> Feedback</a>
+
+
+              <a onclick="opensmk()"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                  <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
+                </svg> SMKN Tutur</a>
+
+
+              <h3>coming soon</h3>
+
+              <a onclick="pla()"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-music" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M6 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                  <path d="M16 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                  <path d="M9 17l0 -13l10 0l0 13"></path>
+                  <path d="M9 8l10 0"></path>
+                </svg> Music</a>
+
+
+
+              <a onclick="openmessage()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M8 9h8"></path>
+                  <path d="M8 13h6"></path>
+                  <path d="M9 18h-3a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-3l-3 3l-3 -3z"></path>
+                </svg> Message</a>
+
+
+              <a class="coming"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users-group" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                  <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1"></path>
+                  <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                  <path d="M17 10h2a2 2 0 0 1 2 2v1"></path>
+                  <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                  <path d="M3 13v-1a2 2 0 0 1 2 -2h2"></path>
+                </svg> Teacher</a>
+
+              <a class="coming"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trophy" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M8 21l8 0"></path>
+                  <path d="M12 17l0 4"></path>
+                  <path d="M7 4l10 0"></path>
+                  <path d="M17 4v8a5 5 0 0 1 -10 0v-8"></path>
+                  <path d="M5 9m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                  <path d="M19 9m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                </svg> Performance</a>
+
+
+
+
+
+              <h6>version : 1.0.0.0.1.0<br>DKV 2 WEBSITE</h6>
+
+
+              <div style="font-size: 5pt;color:gray">
+                <script type="text/javascript">
+                  var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+                  var myDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum&#39;at', 'Sabtu'];
+                  var date = new Date();
+                  var day = date.getDate();
+                  var month = date.getMonth();
+                  var thisDay = date.getDay(),
+                    thisDay = myDays[thisDay];
+                  var yy = date.getYear();
+                  var year = (yy < 1000) ? yy + 1900 : yy;
+                  document.write(thisDay + ', ' + day + ' ' + months[month] + ' ' + year);
+                </script>
+              </div>
+            </div>
+
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-apps" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path>
+                <path d="M4 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path>
+                <path d="M14 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path>
+                <path d="M14 7l6 0"></path>
+                <path d="M17 4l0 6"></path>
+              </svg></span>
+
+
+
+          </div>
+        </header>
+
+        <main>
+          <span class="b">Terbaru</span>
+
+          <div class="solo">
+
+            <div>
+              <div class="solo2">
+                <img srcset="/pemberangkatan.jpg" src="/pemberangkatan.jpg" alt="/pemberangkatan.jpg" class="solosize">
+                <p><span class="date">25 Agu 2023</span><br>
+                  <span class="b">Pemberangkatan PKL</span><br><span class="description">Moment mau pisah selama 6 bulan sama kawan-kawan</span>
+                </p>
+              </div>
+            </div>
+
+
+          </div>
+          <br>
+
+          <span class="b">Best Moment</span>
+
+
+
+
+
+
+
+
+
+          <div class="solo">
+
+            <div>
+              <div class="solo2">
+                <img srcset="/photo4.jpg" src="/photo4.jpg" alt="/photo3.jpg" class="solosize">
+                <p><span class="date">2 Mei 2023</span><br>
+                  <span class="b">Kunjungan Jawa Pos TV</span><br><span class="description">ini di Surabaya pas cuacanya panas banget ges. ini kawan-kawan aslinya pas pada laper,Jadi keliatan lesu T_T</span>
+                </p>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="row">
+            <div class="column nature">
+              <div class="content">
+                <img src="/bersih1.jpg" alt="Photo-Group" style="width:100%">
+                <p><span class="date">3 maret 2023</span><br>
+                  <span class="b">Bersih-bersih Lab</span><br><span class="description">Foto iki asline dipaksa oleh cewek-cewek biar ada kenangan gitu katanya</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="column nature">
+              <div class="content">
+                <img src="bersih2.jpg" alt="Photo-Group" style="width:100%">
+                <p><span class="date">3 maret 2023</span><br>
+                  <span class="b">Bersih-bersih Lab</span><br><span class="description">ini pas bersih-bersih di lab komputer gaes.pas moment mau foto, temen-temen pada ribut sendiri T•T</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="column nature">
+              <div class="content">
+                <img src="upacara.jpg" alt="Photo-Group" style="width:100%">
+                <p><span class="date">31 Jul 2023</span><br>
+                  <span class="b">Petugas Upacara</span><br><span class="description">meskipun pembagian petugasnya agak ruwet gess tapi pas upacaranya berjalan lancar</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="column nature">
+              <div class="content">
+                <img src="kebunbin.jpg" alt="Photo-Group" style="width:100%">
+                <p><span class="date">2 Mei 2023</span><br>
+                  <span class="b">Study Tour KBS</span><br><span class="description">ini pas kita mau jalan² di KBS.pas disana kita keliling² sambil melihat kembaran kita wkwkw</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="column nature">
+              <div class="content">
+                <img src="p2.gif" alt="Photo-Group" style="width:100%">
+                <p><span class="date">10 Nov 1945</span><br>
+                  <span class="b">Title</span><br><span class="description">description</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="column nature">
+              <div class="content">
+                <img src="p2.gif" alt="Photo-Group" style="width:100%">
+                <p><span class="date">10 Nov 1945</span><br>
+                  <span class="b">Title</span><br><span class="description">description</span>
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="solo">
+
+            <div>
+              <div class="solo2">
+                <img srcset="/photo2.jpg" src="/photo2.jpg" alt="photo2.jpg" class="solosize">
+                <p><span class="date">18 July 2022</span><br>
+                  <span class="b">First Time</span><br><span class="description">Ini pas momen awal-awal MPLS sama Mbk Sabrina DKK</span>
+                </p>
+              </div>
+            </div>
+
+
+          </div>
+
+        </main>
+
+        <footer>
+          <div class="foter">
+            <div id="active" onclick="openhome()"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
+                <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
+                <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path>
+              </svg><br>Home</div>
+
+
+            <div class="menu">
+              <div onclick="search()" class="toggle"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus " width="50" height="50" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                  <path d="M9 12l6 0"></path>
+                  <path d="M12 9l0 6"></path>
+                </svg><br>
+
+              </div>
+
+
+              <li style="--i:0;--clr:#C13584">
+                <span onclick="openig()"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
+                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                    <path d="M16.5 7.5l0 .01"></path>
+                  </svg></span>
+              </li>
+
+              <li style="--i:1;--clr:#25d366">
+                <span onclick="opensmk()"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
+                  </svg></span>
+              </li>
+
+              <li style="--i:2;--clr:#1da1f2">
+                <span onclick="opentxt()"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-question-mark" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M8 8a3.5 3 0 0 1 3.5 -3h1a3.5 3 0 0 1 3.5 3a3 3 0 0 1 -2 3a3 4 0 0 0 -2 4"></path>
+                    <path d="M12 19l0 .01"></path>
+                  </svg></span>
+              </li>
+
+              <li style="--i:3;--clr:#FF5733">
+                <span onclick="share()"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-share" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                    <path d="M18 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                    <path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                    <path d="M8.7 10.7l6.6 -3.4"></path>
+                    <path d="M8.7 13.3l6.6 3.4"></path>
+                  </svg></span>
+              </li>
+
+            </div>
+
+
+
+
+
+            <div onclick="openstudent()"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-school" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
+                <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
+              </svg><br>Students</div>
+
+          </div>
+        </footer>
+
+      </div>
+
+
+
+
+
+    </div>
+
+  </div>
+
+  </div>
+  <div class="prompt">
+    <div class="kotak"></div>
+    <br><br>
+
+
+
+    <h1>DI DUKUNG OLEH</h1>
+
+    <div class="logosx">
+
+      <h1 class="logosx1"><span class="logosx2">DKV</span> Desain Komunikasi Visual</h1>
+
+    </div>
+    <div class="quote">
+      <h4>SETIAP PERTEMUAN</h4>
+      <h6>AKAN MELAHIRKAN PERPISAHAN<br>TAPI JANGAN HILANGKAN APA YANG TELAH JADI KENANGAN</h6>
+    </div>
+    
+    
+    
+    <div>
+      <div class="admin">
+        <div id="fb" onclick="window.open('https://www.facebook.com/moch.n.saa?mibextid=2JQ9oc')">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+</svg>
+        </div>
+        
+        
+        <div id="em" onclick="window.open('mailto:nabilsasbianto89@gmail.com')">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
+   <path d="M3 7l9 6l9 -6"></path>
+</svg>
+        </div>
+        
+        
+        <div id="ig" onclick="window.open('https://instagram.com/sa.biant?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D')">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
+   <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+   <path d="M16.5 7.5l0 .01"></path>
+</svg>
+        </div>
+      </div>
+      
+      
+        <div class="copyright"></div>
+    </div>
+    <br><br>
+    
+    
+    
+
+  </div>
+  <!-- Project -->
+  <script src="main.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+</body>
+
+
+</html>

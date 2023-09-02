@@ -1,0 +1,546 @@
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+body
+{
+  background: #171717;
+  color: #FFFFFF;
+  font-family: sans-serif;
+  height: 85vh;
+  margin: 0;
+}
+
+header
+{
+  
+}
+
+main
+{
+  margin: 2%
+}
+
+footer
+{
+  background: linear-gradient(#00000070,#000000);
+  padding: 2%;
+  position: fixed;
+  bottom: 0;
+  display: grid;
+  backdrop-filter: blur(4px);
+  width: 100%;
+  
+}
+
+
+
+
+
+
+
+.banner
+{
+  background: url("/photo3.jpg");
+  background-size: 100%;
+  background-repeat: none;
+  background-position: center;
+  
+  padding: 25%;
+  overflow: hidden
+}
+
+#model2{
+  background-position-y: 80%;
+}
+
+header>h2
+{
+  margin-left: 2%;
+  margin-top: -4%;
+  margin-bottom: 4%
+}
+
+
+header>div
+{
+  display: flex;
+  font-size: 8pt;
+  justify-content: space-evenly;
+  text-align: center;
+
+  align-items: center
+}
+
+.hdr
+{
+  border: solid 1px #FFFFFF;
+  padding: 2%;
+  border-radius: 50px
+}
+
+.hdr:hover
+{
+  background: #0065FF
+}
+
+.b
+{
+  font-weight: bold;
+  font-size: 10pt
+}
+
+.row {
+  margin: 0px -5px;
+}
+
+
+.row,
+.row > .column {
+  padding: 1%;
+}
+
+
+.column {
+  float: left;
+  width: 50%;
+  
+  }
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.date,.description{
+  font-size: 8pt;
+  color: #989898
+}
+
+.content>p
+{
+  margin-top: 0%
+}
+
+
+img
+{
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 1) 2px 2px 2px, rgba(0, 0, 0, 0.19) 0px 7px 13px -3px, rgba(41, 41, 41, 1) 0px -3px 0px inset;
+}
+
+.solo
+{
+  display: grid;
+  align-content: center;
+  margin-inline: 10%;
+  margin-top: 2%
+  
+}
+
+
+.solo2>p
+{
+  margin-top: 0%
+}
+
+.solosize
+{
+  width: 100%;
+  align-content: center;
+  align-items: center;
+}
+
+
+
+.foter
+{
+  display: flex;
+  justify-content: space-around;
+  
+  
+}
+
+
+.foter>div
+{
+  margin-inline: 0%;
+  text-align: center;
+  font-size: 8pt;
+  
+}
+
+#active
+{
+  border-bottom: solid 1px #0065FF;
+  color: #0065FF
+}
+
+#active2
+{
+  background: #0065FF;
+}
+
+.foter>div:hover
+{
+  color: #0065FF
+}
+
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: .5s;
+  padding-top: 60px;
+}
+
+
+.sidenav a {
+  padding: 8px 8px 8px 40px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: grid;
+  transition: 0.3s;
+  text-align: left;
+  align-content: center;
+  align-items: center;
+  
+}
+
+.sidenav a>svg
+{
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  display: grid;
+  position: absolute;
+  margin-left: -10%;
+  
+}
+
+.sidenav a:hover {
+  color: #0065FF;
+}
+
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 40px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 1240px) {
+  .sidenav {padding-top: 0px;}
+  .sidenav a {font-size: 20px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+::selection
+{
+  color: #0065FF
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.meta
+{
+  
+  
+  
+  position: relative;
+  
+  
+  overflow-y: hidden;
+  
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 7s;
+  animation-name: animatebottom;
+  animation-duration: 7s;
+  scroll-behavior: smooth;
+  
+}
+
+
+
+
+
+
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-50vh; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-50vh; opacity:0 } 
+  to{ bottom:0; opacity:1}
+}
+
+
+
+
+.menu li {
+  position: absolute;
+  left: 25%;
+  top: -70%;
+  list-style: none;
+  transition: 0.5s;
+  transform: rotate(calc(240deg/4 * var(--i)));
+  transform-origin: 90px;
+  scale: 0%;
+  transition-delay: calc(0.05s * var(--i));
+}
+
+.menu.active li {
+  scale: 1;
+}
+
+.menu li span {
+  position: relative;
+  display: flex;
+  transform: rotate(calc(240deg/-4 * var(--i)));
+  width: 50px;
+  height: 50px;
+  background-color: #000000EB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  color: var(--clr);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
+}
+
+.menu li:hover span {
+  font-size: 1rem;
+  box-shadow: 0 0 0 2px var(--clr),
+    0 0 0 6px black;
+}
+
+
+.toggle
+{
+ margin-top: -8%;
+ margin-left: 18%;
+ position: relative;
+}
+
+.kelas
+{
+  position: relative;
+  display: inline-block;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  margin-top: 10%;
+  z-index: 1;
+  transition: 5s;
+  opacity: 0.5
+  
+}
+
+.dropdown-content{
+  opacity: 1;
+  transition: 1s;
+  animation: transisi 0.5s ease-in 1;
+}
+
+
+@keyframes transisi
+{
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+
+
+
+.kelas:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content div 
+{
+  margin: 5%;
+  padding: 2%;
+  border-inline: solid 1px #FFFFFF;
+  
+}
+
+
+.dropdown-content div:hover
+{
+  background: none;
+  border: solid 1px #FFFFFF;
+  
+  
+}
+
+.dropdown-content div:nth-child(2)
+{
+  background: #0065FF;
+  border: solid 1px #FFFFFF;
+  padding: 2%;
+  
+}
+
+
+
+
+.prompt
+{
+  margin-top: 1%;
+  height: auto;
+  width: 100%;
+  background: #000000;
+  text-align: center
+  
+}
+
+.kotak
+{
+  position: absolute;
+  left: -50%;
+  border: solid 1px #0065FF;
+  height: 50vh;
+  width: 50vh;
+  background: #000000;
+  transform: rotate(45deg);
+  z-index: -1;
+  overflow: hidden;
+  box-shadow: 0 0 8px #0065FF
+}
+
+
+.logosx
+{
+  
+  border: solid 1px #2E2e2e;
+  border-radius: 10px;
+  margin: 5%;
+  height: 20vh;
+  display: grid;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    box-shadow: 0 0 8px #061884;
+    animation: boder 3s ease-in-out alternate infinite;
+}
+
+@keyframes boder
+{
+  from {border-color: #2e2e2e;}
+  to {border-color: #3956FE;}
+}
+
+
+.logosx1
+{
+  font-size: 8pt;
+  color: #2E2E2E;
+  animation: clr 3s ease-in-out alternate infinite;
+}
+
+.logosx2
+{
+  font-size: 8pt;
+  background: #2E2E2E;
+  border-radius: 4px;
+  padding: 2.5%;
+  color: #040404;
+  animation: bgt 3s ease-in-out alternate infinite;
+}
+
+
+
+@keyframes bgt
+{
+  0% {background-color: #2e2e2e}
+  100% {background-color: #3956FE}
+}
+
+
+@keyframes clr
+{
+  0% {color: #2e2e2e}
+  100% {color: #3956FE}
+}
+
+
+.quote
+{
+  position: relative;
+  padding-block: 20%;
+  margin-inline: 20%;
+  font-size: 7pt
+}
+
+
+
+.copyright:before
+{
+  content: '2023 - 2030 | COPYRIGHT © CREATED BY SA.BIANT'!important;
+  
+  color: #C3C3C3;
+  z-index: 1;
+  padding-bottom: 20%;
+  font-size: 6pt
+}
+
+
+.admin
+{
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+
+  align-items: center
+}
+
+.admin div:hover
+{
+  color: #00A7E6
+}

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Student</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="/style/student.css">
+  
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  
+  
+  <meta property="og:image" content="https://dkv-2-beta.mrxnbl.repl.co/thumbnail.jpg" />
+  <meta property="og:title" content="DKV 2 SMKN Tutur" />
+  
+</head>
+
+<body ononline="Onnline()" onoffline="Onffline()">
+  <div>
+    
+    <div class="banner"></div>
+    
+    <header>
+      
+    
+      
+      
+      <h3>DKV 2 students</h3>
+      <div class="topnav">
+        
+        <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+          <path d="M21 21l-6 -6"></path>
+        </svg></div>
+        <input type="text" id="mySearch" onkeyup="cari()" placeholder="Search.."></input>    
+        
+        
+        
+        
+        <div id="mySidenav" class="sidenav">
+                <div href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</div>
+                <h1 style="text-align:center">Menu</h1>
+        
+        
+        
+        
+                <a onclick="openig()">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
+                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                    <path d="M16.5 7.5l0 .01"></path>
+                  </svg> Instagram</a>
+        
+        
+        
+        
+        
+                <a onclick="openfeedback()"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-heart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+                    <path d="M6 21v-2a4 4 0 0 1 4 -4h.5"></path>
+                    <path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z"></path>
+                  </svg> Feedback</a>
+        
+        
+                <a onclick="opensmk()"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
+                  </svg> SMKN Tutur</a>
+        
+        
+                <h3>coming soon</h3>
+        
+                <a onclick=""><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-music" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                    <path d="M16 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                    <path d="M9 17l0 -13l10 0l0 13"></path>
+                    <path d="M9 8l10 0"></path>
+                  </svg> Music</a>
+        
+        
+        
+                <a onclick="openmessage()">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M8 9h8"></path>
+                    <path d="M8 13h6"></path>
+                    <path d="M9 18h-3a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-3l-3 3l-3 -3z"></path>
+                  </svg> Message</a>
+        
+        
+                <a class="coming"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users-group" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                    <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1"></path>
+                    <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                    <path d="M17 10h2a2 2 0 0 1 2 2v1"></path>
+                    <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                    <path d="M3 13v-1a2 2 0 0 1 2 -2h2"></path>
+                  </svg> Teacher</a>
+        
+                <a class="coming"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trophy" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M8 21l8 0"></path>
+                    <path d="M12 17l0 4"></path>
+                    <path d="M7 4l10 0"></path>
+                    <path d="M17 4v8a5 5 0 0 1 -10 0v-8"></path>
+                    <path d="M5 9m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                    <path d="M19 9m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                  </svg> Performance</a>
+        
+                <h6>version : 1.0.0.0.1.0<br>DKV 2 WEBSITE</h6>
+              </div>
+        
+              <span style="font-size:30px;cursor:pointer;position: absolute;left:87.5%" onclick="openNav()"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-apps" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path>
+                  <path d="M4 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path>
+                  <path d="M14 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path>
+                  <path d="M14 7l6 0"></path>
+                  <path d="M17 4l0 6"></path>
+                </svg></span>
+        
+        
+        
+              </div>
+      </div>
+
+
+
+
+
+    </header>
+    
+    
+
+    
+    
+    <main>
+
+      <div class="row">
+        <div class="column nature">
+          <div class="content">
+            <img src="s1.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Inka Amelia Putri.F</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s3.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Intan Nuraini</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s2.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Intan Khumairani</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s4.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Irda Kurniawan</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s5.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Java Hardi.S</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s6.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Jingga Aulia A.P</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s7.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Kayla Zahra Alifia</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s8.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Keysa Nabila Putri</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s9.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Khofifah Windayanti.R</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s10.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Lailatul Maghfiroh</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s11.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">M Kefin.A</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s12.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Maichul Dwi.M</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s13.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Miftahuz Zainiah</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s14.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Mita Febrianti</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="nabil.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">M.Nabil Sasbianto</p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s16.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">M.Hanafi Abbas</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s17.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">M.Wildan Firdaus</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s18.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">M.Afifi</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s19.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">M.Fabiano Bevan.P</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s20.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">M.Farel Harifaldi</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s21.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">M.Ramah Revanda</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s22.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">M.Taufiqur Rohman</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s23.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Na'if Fajar Ibrahim</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s24.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Nabila Keysa Revalina</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s25.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Nabila Nurul Elva.R</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s26.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Nadia Amelia</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s27.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Nandiva Naisyalu</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s28.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Natasya Putri Fadilah</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s29.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Navisa Dwi Anggia</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s30.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Nazwa Cahya Camila</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s31.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Nezha Revana Aulia</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s32.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Nicholas Firmansyah</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s33.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Nur Ahmad Aditya</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s34.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Nur Ajija</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s35.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Nur Halimah</span></p>
+          </div>
+        </div>
+        
+        <div class="column nature">
+          <div class="content">
+            <img src="s36.jpg" alt="Students" style="width:100%">
+            <p>
+            <span class="b">Nur khusnul Bima.R</span></p>
+          </div>
+        </div>
+        
+        </div>
+      
+    </main>
+    
+    <footer>
+      <div class="foter">
+      <div onclick="openhome()"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
+   <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
+   <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path>
+</svg><br>Home</div>
+
+<div class="menu">
+<div onclick="search()" class="toggle"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="50" height="50" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+    <path d="M9 12l6 0"></path>
+    <path d="M12 9l0 6"></path>
+  </svg><br>
+
+</div>
+
+  
+      <li style="--i:0;--clr:#C13584">
+        <span onclick="openig()">            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
+                      <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                      <path d="M16.5 7.5l0 .01"></path>
+                    </svg></span>
+    </li>
+    
+    <li style="--i:1;--clr:#25d366">
+       <span onclick="opensmk()"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+         <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+         <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
+       </svg></span>
+    </li>
+    
+    <li style="--i:2;--clr:#1da1f2">
+       <span onclick="opentxt()"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-question-mark" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+         <path d="M8 8a3.5 3 0 0 1 3.5 -3h1a3.5 3 0 0 1 3.5 3a3 3 0 0 1 -2 3a3 4 0 0 0 -2 4"></path>
+         <path d="M12 19l0 .01"></path>
+       </svg></span>
+    </li>
+    
+     <li style="--i:3;--clr:#FF5733" >
+       <span onclick="share()"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-share" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+         <path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+         <path d="M18 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+         <path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+         <path d="M8.7 10.7l6.6 -3.4"></path>
+         <path d="M8.7 13.3l6.6 3.4"></path>
+       </svg></span>
+    </li>
+    
+</div>
+      
+      <div onclick="openstudent()" id="active"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-school" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
+   <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
+</svg><br>Students</div>
+      
+      </div>
+    </footer>
+    
+  </div> 
+  
+  
+  <div class="prompt">
+
+  
+  
+  
+<br><br>
+  
+
+
+      
+
+        <div>
+      <div class="admin">
+        <div id="fb" onclick="window.open('https://www.facebook.com/moch.n.saa?mibextid=2JQ9oc')">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+          </svg>
+        </div>
+
+
+        <div id="em" onclick="window.open('mailto:nabilsasbianto89@gmail.com')">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
+            <path d="M3 7l9 6l9 -6"></path>
+          </svg>
+        </div>
+
+
+        <div id="ig" onclick="window.open('https://instagram.com/sa.biant?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D')">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
+            <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+            <path d="M16.5 7.5l0 .01"></path>
+          </svg>
+        </div>
+      </div>
+    
+    
+          <div class="copyright"></div>
+        </div>
+    
+
+    </div>
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>
